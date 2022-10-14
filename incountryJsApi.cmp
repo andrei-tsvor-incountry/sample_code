@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="storage" type="Object"/>
+    <aura:attribute name="params" type="Object"/>
+    <aura:attribute name="openModal" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <testIncountry1:inCountry aura:id="InCountry"></testIncountry1:inCountry>
+    <!-- <c:inCountry aura:id="InCountry"></c:inCountry> -->
+    <c:sampleCustomForm storage="{!v.storage}" params="{!v.params}" openModal="{!v.openModal}" aura:id="sampleCustomForm"></c:sampleCustomForm>
+</aura:component>

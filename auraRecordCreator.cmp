@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="openModal" type="Boolean" default="false"/>
+    <aura:attribute name="params" type="Object"/>
+
+    <aura:method name="setParams" action="{!c.handleParams}" access="public">
+        <aura:attribute name="value" type="Object" access="public"/>
+    </aura:method>
+    <aura:method name="fire" action="{!c.handleFire}" access="public" />
+
+    <c:incountryJsApi openModal="{!v.openModal}" params="{!v.params}" aura:id="jsApi"/>
+</aura:component>
